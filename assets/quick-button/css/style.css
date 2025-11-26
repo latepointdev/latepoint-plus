@@ -1,0 +1,69 @@
+/* LatePoint Quick Button Addon Styles */
+
+.latepoint-quick-add-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+
+.latepoint-quick-add-btn i {
+	font-size: 16px;
+}
+
+.page-header-w {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.page-header-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-left: auto;
+}
+
+/* Settings Page Styles */
+.latepoint-quick-button-settings .form-table th {
+	width: 200px;
+}
+
+.latepoint-quick-button-settings fieldset label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.latepoint-quick-button-settings fieldset label input[type="checkbox"] {
+	margin-right: 6px;
+}
+
+.latepoint-quick-button-settings fieldset label .description {
+	font-style: italic;
+	color: #999;
+	margin-left: 4px;
+}
+
+/* Ensure button looks good on mobile */
+@media (max-width: 768px) {
+	.page-header-w {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.page-header-actions {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.latepoint-quick-add-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,102 @@
+/**
+ * Bulk Services Admin Styles
+ * Styles for the embedded bulk services interface using LatePoint's native connection selector
+ */
+
+/* Bulk services wrapper - embedded in order form */
+.bulk-services-wrapper {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+}
+
+.bulk-services-wrapper.show {
+    display: block;
+}
+
+/* Category filter styling - matches native LatePoint form elements */
+.bulk-services-category-filter {
+    margin-bottom: 16px;
+}
+
+.bulk-services-category-filter label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+    color: inherit;
+    font-size: inherit;
+    vertical-align: middle;
+}
+
+.bulk-services-category-select {
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 200px;
+    /* Let LatePoint's native select styling take over */
+}
+
+/* Use LatePoint's native connection selector styling */
+.bulk-services-selector .connection {
+    background: #fff;
+    border: 1px solid #e1e5e9;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.bulk-services-selector .connection:hover {
+    border-color: #3498db;
+}
+
+.bulk-services-selector .connection.active {
+    border-color: #3498db;
+    background-color: #e8f4fd;
+}
+
+.bulk-services-selector .connection-i {
+    padding: 16px;
+}
+
+.bulk-services-selector .connection-name {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.bulk-services-selector .connection-details {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.bulk-services-selector .service-category {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Actions section */
+.bulk-services-actions {
+    margin-top: 16px;
+    text-align: right;
+}
+
+/* Button states */
+.bulk-services-trigger-btn.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bulk-services-wrapper {
+        margin-top: 15px;
+    }
+    
+    .bulk-services-selector .connection-i {
+        padding: 12px;
+    }
+    
+    .bulk-services-actions {
+        text-align: center;
+    }
+}

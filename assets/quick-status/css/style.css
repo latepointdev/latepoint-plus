@@ -1,0 +1,205 @@
+/* LatePoint Quick Status Styles - Updated for LatePoint 5.2.1+ */
+
+/* Base toggle button styling using LatePoint's design system */
+.lp-toggle-service {
+    position: relative;
+    transition: all 0.2s ease;
+    border-radius: var(--latepoint-border-radius, 6px);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none !important;
+    box-shadow: none;
+    line-height: 1.2;
+}
+
+/* Green button for disabled services (Enable button) */
+.lp-toggle-service[data-status="disabled"] {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff !important;
+}
+
+.lp-toggle-service[data-status="disabled"]:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+.lp-toggle-service[data-status="disabled"]:focus {
+    outline: 2px solid #28a745;
+    outline-offset: 2px;
+}
+
+/* Red button for active services (Disable button) */
+.lp-toggle-service[data-status="active"] {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff !important;
+}
+
+.lp-toggle-service[data-status="active"]:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(220, 53, 69, 0.3);
+}
+
+.lp-toggle-service[data-status="active"]:focus {
+    outline: 2px solid #dc3545;
+    outline-offset: 2px;
+}
+
+/* Loading state using LatePoint's loading system */
+.lp-toggle-service.os-loading {
+    color: transparent !important;
+    position: relative;
+    pointer-events: none;
+}
+
+.lp-toggle-service.os-loading:after {
+    display: block;
+    content: "";
+    width: 14px !important;
+    height: 14px !important;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    border-right: 2px solid transparent;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: os-loading 700ms infinite linear;
+    background-color: transparent !important;
+}
+
+/* Loading animation keyframes */
+@keyframes os-loading {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Error state with shake animation */
+.lp-toggle-service.os-error {
+    animation: latepointShake 1s ease-in-out;
+}
+
+@keyframes latepointShake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-4px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(4px);
+    }
+}
+
+/* Disabled state */
+.lp-toggle-service:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Block button variant for full width */
+.lp-toggle-service.latepoint-btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Small button variant */
+.lp-toggle-service.latepoint-btn-sm {
+    padding: 6px 8px;
+    font-size: 13px;
+}
+
+/* Integration with service tiles */
+.os-service-tile .lp-toggle-service {
+    margin-top: 10px;
+}
+
+/* Integration with service foot section */
+.os-service-foot .lp-toggle-service {
+    margin-top: 8px;
+}
+
+/* Ensure proper spacing in service info rows */
+.latepoint-service-tile-info-rows-after .lp-toggle-service {
+    margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lp-toggle-service {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+}
+
+/* Dark mode support (if LatePoint adds dark mode) */
+@media (prefers-color-scheme: dark) {
+    .lp-toggle-service[data-status="disabled"] {
+        background-color: #198754;
+        border-color: #198754;
+    }
+    
+    .lp-toggle-service[data-status="disabled"]:hover {
+        background-color: #157347;
+        border-color: #146c43;
+    }
+    
+    .lp-toggle-service[data-status="active"] {
+        background-color: #b02a37;
+        border-color: #b02a37;
+    }
+    
+    .lp-toggle-service[data-status="active"]:hover {
+        background-color: #a02834;
+        border-color: #962530;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .lp-toggle-service {
+        border-width: 2px;
+    }
+    
+    .lp-toggle-service:focus {
+        outline-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .lp-toggle-service {
+        transition: none;
+    }
+    
+    .lp-toggle-service:hover {
+        transform: none;
+    }
+    
+    .lp-toggle-service.os-loading:after {
+        animation: none;
+    }
+    
+    .lp-toggle-service.os-error {
+        animation: none;
+    }
+}
