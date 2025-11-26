@@ -46,6 +46,8 @@ Add "New Item" buttons to page headers for faster navigation.
 
 ### Bulk Services
 
+![image](/screenshots/bulk-services.gif)
+
 1. Navigate to an existing order/booking
 2. Click the "Bulk Add" button in the Order Items section
 3. Select services from the list (use category filter if needed)
@@ -54,12 +56,16 @@ Add "New Item" buttons to page headers for faster navigation.
 
 ### Quick Status
 
+![image](/screenshots/quick-status-2.gif)
+
 1. Go to **LatePoint → Services**
 2. Each service tile shows an Enable/Disable button
 3. Click the button to toggle the service status
 4. Page reloads automatically to reflect changes
 
 ### Quick Button
+
+![image](/screenshots/quick-button.gif)
 
 1. Navigate to any LatePoint admin page (Services, Agents, Customers, etc.)
 2. Look for the "New [Item]" button on the right side of the page header
@@ -135,17 +141,3 @@ GPL v2 or later - see [LICENSE](LICENSE) for details
 For issues, feature requests, or questions:
 - Open an issue on [GitHub](https://github.com/latepointdev/latepoint-plus/issues)
 - Visit [Latepoint Dev](https://latepoint.dev)
-
-## Screenshots
-
-### Bulk Services
-![Bulk Services Interface](screenshots/bulk-services.png)
-*Add multiple services to orders at once*
-
-### Quick Status
-![Quick Status Toggles](screenshots/quick-status.png)
-*Toggle service status with one click*
-
-### Quick Button
-![Quick Button](screenshots/quick-button.png)
-*Fast access to new item forms*
